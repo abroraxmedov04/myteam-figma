@@ -1,0 +1,71 @@
+@mixin flex-box(
+  $flex-type,
+  $direction-type,
+  $justifyType,
+  $alignment,
+  $flexGap
+) {
+  display: $flex-type;
+  flex-direction: $direction-type;
+  justify-content: $justifyType;
+  align-items: $alignment;
+  gap: $flexGap;
+}
+
+@mixin list-unstyled {
+  list-style-type: none;
+  padding-left: 0;
+  margin-block: 0;
+}
+
+@mixin main-text-style(
+  $font-size,
+  $font-weight,
+  $line-height,
+  $color,
+  $text-align
+) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+  text-align: $text-align;
+}
+
+@mixin btn-style(
+  $btn-bg-color,
+  $btn-color-text,
+  $btn-font-size,
+  $btn-radius,
+  $btn-border-radius,
+  $btn-padding,
+  $btn-bg-color-hover,
+  $btn-color-text-hover,
+  $btn-border-hover,
+  $btn-background-disabled,
+  $btn-text-color-disabled,
+  $btn-border-disabled
+) {
+  background-color: $btn-bg-color;
+  color: $btn-color-text;
+  font-size: $btn-font-size;
+  border-radius: $btn-radius;
+  border: $btn-border-radius;
+  padding: $btn-padding;
+  transition: ease-in 0.4s;
+
+  &:hover {
+    background-color: $btn-bg-color-hover;
+    color: $btn-color-text-hover;
+    border: $btn-border-hover;
+  }
+
+  &:disabled {
+    background-color: $btn-background-disabled;
+    color: $btn-text-color-disabled;
+    border: $btn-border-disabled;
+  }
+}
+
+
+
