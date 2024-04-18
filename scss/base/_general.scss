@@ -1,3 +1,6 @@
+@use "../base/fonts" as font;
+@use "../abstract/variables" as var;
+
 *,
 *::before,
 *::after {
@@ -6,4 +9,8 @@
 
 img {
   display: block;
+}
+
+body {
+  font-family: var.$main-font;
 }

@@ -343,6 +343,10 @@ img {
   display: block;
 }
 
+body {
+  font-family: "Livvic";
+}
+
 .container {
   max-width: 1150px;
   width: 100%;
