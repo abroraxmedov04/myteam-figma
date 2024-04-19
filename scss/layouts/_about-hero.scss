@@ -3,25 +3,26 @@
 @use "../abstract/media" as *;
 
 .hero {
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image: url("../../assets/images/hero-mobile-position.png");
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    background-repeat: no-repeat;
+    top: 100%;
+    right: 0;
+
+    @include media(683px) {
+      background-image: url("../../assets/images/menu-open-position-element.png");
+      top: 45%;
+    }
+  }
   &__inner {
     position: relative;
-    margin: 40px 0 80px; // Combined margin shorthand
-
-    &::after {
-      content: "";
-      background-image: url("../../assets/images/hero-mobile-position.png");
-      position: absolute;
-      width: 100px;
-      height: 200px;
-      background-repeat: no-repeat;
-      top: 110%;
-      right: -24px;
-
-      @include media(683px) {
-        background-image: url("../../assets/images/menu-open-position-element.png");
-        top: 50%;
-      }
-    }
+    margin: 40px 0px;
   }
 
   &__content {
@@ -33,7 +34,7 @@
       padding-inline: 0;
       display: flex;
       align-items: start;
-      gap: 100px;
+      justify-content: space-between;
     }
 
     h1 {
@@ -67,5 +68,11 @@
         }
       }
     }
+  }
+}
+
+@include media(683px) {
+  .container {
+    padding-inline: 20px;
   }
 }

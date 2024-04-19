@@ -1,0 +1,176 @@
+@use "../abstract/variables" as var;
+@use "../abstract/mixins" as mixin;
+@use "../abstract/media" as *;
+
+.open {
+  opacity: 0;
+}
+
+.meets {
+  background-color: var.$secondary-color-deepGreen;
+  margin-top: 100px;
+  padding-block: 88px;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("../../assets/images/meets-top-position-mobile.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+
+    @include media(683px) {
+      background-image: url("../../assets/images/meets-second-position-element.png");
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  &::after {
+    content: "";
+    background-image: url("../../assets/images/meets-bottom-position-mobile.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 147px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__title {
+    @include mixin.main-text-style(32px, 700, 32px, #ffffff, center);
+    margin-bottom: 48px;
+
+    @include media(992px) {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+}
+
+.clients {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 25px;
+
+  @include media(683px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include media(992px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+  }
+
+  &__card {
+    padding-block: 32px;
+    padding-inline: 24px;
+    background-color: var.$secondary-color-sacramentoGreen;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    @include media(683px) {
+      max-width: 281px;
+      width: 100%;
+    }
+
+    @include media(992px) {
+      max-width: 350px;
+      width: 100%;
+    }
+  }
+
+  &__name {
+    margin-top: 18px;
+    color: var.$secondary-color-lightBlue;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  &__info {
+    margin-top: 0;
+    font-style: italic;
+    line-height: 25px;
+    font-size: 15px;
+  }
+}
+
+.btn-rotate-card {
+  width: 56px;
+  height: 56px;
+  background-color: var.$secondary-color-lightBlue;
+  border-radius: 100%;
+  background-image: url("../../assets/images/circle-card-img.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: -28px;
+  cursor: pointer;
+  transition: transform 0.4s;
+  z-index: 10;
+}
+
+.clients__card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clents__card-back {
+  padding-block: 32px;
+  padding-inline: 24px;
+  background-color: var.$secondary-color-sacramentoGreen;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+
+  strong {
+    margin-top: 18px;
+    color: var.$secondary-color-lightBlue;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  p {
+    text-align: center;
+    font-weight: 600;
+    line-height: 25px;
+    font-size: 15px;
+  }
+}
+
+.clients__icon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  i {
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: var.$primary-color-coral;
+    }
+  }
+}
+
+@include media(683px) {
+  .container {
+    padding-inline: 20px;
+  }
+}
