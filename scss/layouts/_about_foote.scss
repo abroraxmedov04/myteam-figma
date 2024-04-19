@@ -1,0 +1,8 @@
+@use "../abstract/variables" as var;
+@use "../abstract/mixins" as mixin;
+@use "../abstract/media" as *;
+
+.footer {
+  background-color: var.$secondary-color-darkGreen;
+  padding-block: 66px;
+}
