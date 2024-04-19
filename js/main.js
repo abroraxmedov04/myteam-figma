@@ -22,5 +22,3 @@ document.addEventListener("click", (e) => {
     overlay.style.display = "none";
   });
 });
-
-

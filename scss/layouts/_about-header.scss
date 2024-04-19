@@ -24,7 +24,7 @@
     justify-content: space-between;
     padding-block: 40px;
 
-    @include media(768px) {
+    @include media(683px) {
       padding-block: 64px;
       justify-content: start;
       gap: 48px;
@@ -41,7 +41,7 @@
     background-repeat: no-repeat;
     z-index: 99;
 
-    @include media(768px) {
+    @include media(683px) {
       display: none;
     }
   }
@@ -70,7 +70,7 @@
     transition: ease-out 0.4s;
     z-index: 20;
 
-    @include media(768px) {
+    @include media(683px) {
       width: 100%;
       position: static;
       transform: translateX(0);
@@ -94,21 +94,21 @@
       right: 0;
       z-index: 1;
 
-      @include media(768px) {
+      @include media(683px) {
         display: none;
       }
     }
   }
 }
 
-@include media(768px) {
+@include media(683px) {
   .container {
     padding-inline: 20px;
   }
 }
 
 .navbar {
-  @include media(768px) {
+  @include media(683px) {
     width: 100%;
     display: flex;
     align-items: center;
@@ -124,7 +124,7 @@
     padding-bottom: 36px;
     z-index: 15;
 
-    @include media(768px) {
+    @include media(683px) {
       flex-direction: row;
     }
   }
@@ -136,7 +136,7 @@
     cursor: pointer;
     transition: ease 0.4s;
 
-    @include media(768px) {
+    @include media(683px) {
       &:hover {
         color: var.$primary-color-coral;
       }

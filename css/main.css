@@ -345,6 +345,8 @@ img {
 
 body {
   font-family: "Livvic";
+  background-color: #014e56;
+  color: white;
 }
 
 .container {
@@ -374,7 +376,7 @@ body {
   justify-content: space-between;
   padding-block: 40px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 683px) {
   .header__inner {
     padding-block: 64px;
     justify-content: start;
@@ -391,7 +393,7 @@ body {
   background-repeat: no-repeat;
   z-index: 99;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 683px) {
   .header__menu-btn {
     display: none;
   }
@@ -419,7 +421,7 @@ body {
   transition: ease-out 0.4s;
   z-index: 20;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 683px) {
   .header__navigation {
     width: 100%;
     position: static;
@@ -444,18 +446,18 @@ body {
   right: 0;
   z-index: 1;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 683px) {
   .header__navigation::after {
     display: none;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 683px) {
   .container {
     padding-inline: 20px;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 683px) {
   .navbar {
     width: 100%;
     display: flex;
@@ -474,7 +476,7 @@ body {
   padding-bottom: 36px;
   z-index: 15;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 683px) {
   .navbar__list {
     flex-direction: row;
   }
@@ -486,7 +488,7 @@ body {
   cursor: pointer;
   transition: ease 0.4s;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 683px) {
   .navbar__link:hover {
     color: #f67e7e;
   }
@@ -515,4 +517,75 @@ body {
 
 .menu-show {
   transform: translateX(0);
+}
+
+.hero__inner {
+  position: relative;
+  margin: 40px 0 80px;
+}
+.hero__inner::after {
+  content: "";
+  background-image: url("../../assets/images/hero-mobile-position.png");
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  background-repeat: no-repeat;
+  top: 110%;
+  right: -24px;
+}
+@media only screen and (min-width: 683px) {
+  .hero__inner::after {
+    background-image: url("../../assets/images/menu-open-position-element.png");
+    top: 50%;
+  }
+}
+@media only screen and (min-width: 683px) {
+  .hero__content {
+    padding-inline: 116px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hero__content {
+    padding-inline: 0;
+    display: flex;
+    align-items: start;
+    gap: 100px;
+  }
+}
+.hero__content h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+@media only screen and (min-width: 992px) {
+  .hero__content h1 {
+    font-size: 64px;
+    text-align: start;
+  }
+}
+.hero__content p {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+}
+@media only screen and (min-width: 992px) {
+  .hero__content p {
+    padding-top: 40px;
+    font-size: 18px;
+    text-align: start;
+    max-width: 730px;
+    width: 100%;
+    position: relative;
+  }
+  .hero__content p::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: #f67e7e;
+    top: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
