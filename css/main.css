@@ -925,4 +925,233 @@ body {
 .footer {
   background-color: #002529;
   padding-block: 66px;
+}
+
+@media only screen and (min-width: 992px) {
+  .foote__logo-image {
+    width: 160px;
+  }
+}
+
+.footer__side-left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+@media only screen and (min-width: 683px) {
+  .footer__side-left-content {
+    align-items: start;
+    gap: 0;
+  }
+}
+
+.footer__icons-left {
+  display: none;
+}
+@media only screen and (min-width: 683px) {
+  .footer__icons-left {
+    display: block;
+    margin-top: 33px;
+    display: flex;
+    gap: 16px;
+  }
+}
+.footer__icons-left i {
+  font-size: 24px;
+  transition: 0.4s;
+}
+.footer__icons-left i:hover {
+  color: #f67e7e;
+}
+@media only screen and (min-width: 992px) {
+  .footer__icons-left {
+    display: none;
+  }
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 683px) {
+  .footer__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer__logo {
+  display: block;
+}
+
+.footer__side-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+@media only screen and (min-width: 683px) {
+  .footer__side-left {
+    align-items: start;
+    gap: 0;
+    flex-direction: row;
+    gap: 125px;
+  }
+}
+.footer__side-left ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-block: 0;
+  display: flex;
+}
+@media only screen and (min-width: 683px) {
+  .footer__side-left ul {
+    margin-top: 54px;
+  }
+}
+.footer__side-left ul a {
+  text-decoration-line: none;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  transition: 0.4s;
+}
+.footer__side-left ul a:hover {
+  color: #f67e7e;
+}
+.footer__side-left ul a:not(:first-child) {
+  margin-right: 24px;
+}
+
+.footer__side-right {
+  margin-top: 24px;
+}
+@media only screen and (min-width: 683px) {
+  .footer__side-right {
+    margin-top: 0;
+  }
+}
+.footer__side-right ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-block: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 683px) {
+  .footer__side-right ul {
+    align-items: end;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer__side-right ul {
+    display: none;
+  }
+}
+.footer__side-right ul li {
+  opacity: 60%;
+  font-weight: 600;
+  line-height: 25px;
+}
+.footer__side-right p {
+  display: inline-block;
+  margin-top: 16px;
+  opacity: 60%;
+  font-weight: 600;
+  line-height: 25px;
+  text-align: center;
+}
+@media only screen and (min-width: 683px) {
+  .footer__side-right p {
+    align-items: end;
+    margin-top: 32px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer__side-right p {
+    align-items: end;
+    margin: 0;
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 683px) {
+  .footer__side-right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+}
+
+.footer__icons-right {
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.footer__icons-right i {
+  font-size: 24px;
+  transition: ease 0.4s;
+  cursor: pointer;
+}
+.footer__icons-right i:hover {
+  color: #f67e7e;
+}
+@media only screen and (min-width: 683px) {
+  .footer__icons-right i {
+    margin-left: 16px;
+  }
+}
+@media only screen and (min-width: 683px) {
+  .footer__icons-right {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 683px) {
+  .footer__icons-right {
+    display: none;
+  }
+}
+.footer__list-adresses-left {
+  display: none !important;
+  display: flex;
+  flex-direction: column;
+}
+.footer__list-adresses-left li {
+  font-weight: 600;
+  opacity: 60%;
+  line-height: 24px;
+}
+@media only screen and (min-width: 992px) {
+  .footer__list-adresses-left {
+    display: block !important;
+    margin: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer__icons-right {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer__side-left-content {
+    gap: 0;
+  }
+}
+
+.footer__list {
+  gap: 16px;
+}
+@media only screen and (min-width: 992px) {
+  .footer__list {
+    gap: 16px;
+    margin-top: 25px !important;
+  }
 }/*# sourceMappingURL=main.css.map */
