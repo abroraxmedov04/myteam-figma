@@ -1,0 +1,73 @@
+@use "../abstract/variables" as var;
+@use "../abstract/mixins" as mixin;
+@use "../abstract/media" as *;
+
+.partners {
+  background-color: var.$secondary-color-sacramentoGreen;
+  padding-block: 88px;
+  position: relative;
+
+  @include media(683px) {
+    padding-block: 100px;
+  }
+
+  @include media(992px) {
+    padding-block: 140px;
+  }
+
+  &::before {
+    content: "";
+    background-image: url("../../assets/images/partners-section-mobile-position.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+
+    @include media(683px) {
+      background-image: url("../../assets/images/partners-bg-tablet.png");
+      width: 200px;
+      height: 200px;
+    }
+
+    @include media(992px) {
+      background-image: url("../../assets/images/partners-bg-position-desktop.png");
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  &__title {
+    @include mixin.main-text-style(32px, 700, 32px, null, center);
+
+    @include media(992px) {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+
+  &__list {
+    @include mixin.list-unstyled;
+    max-width: 100%;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    cursor: pointer;
+
+    @include media(683px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@include media(683px) {
+  .container {
+    padding-inline: 20px;
+  }
+}
