@@ -1,0 +1,106 @@
+@import "../block/blocks";
+
+.site-footer {
+    padding-block: 65px;
+    background-color: $secondary-color-darkGreen;
+}
+
+.logo-img {
+    margin-inline: auto;
+}
+
+.site-footer__list {
+    @include flex-box(flex, null, center, center, 24px);
+    @include list-unstyled;
+    margin-block: 24px;
+}
+
+.site-footer__link {
+    @include main-text-style(15px, 600, 25px, #fff, null);
+    font-family: $main-font;
+    text-decoration-line: none;
+
+    &:hover {
+        color: $primary-color-coral;
+        transition: 0.3s;
+    }
+}
+
+.site-footer__address span {
+    display: block;
+}
+
+.site-footer__address-location {
+    @include main-text-style(15px, 600, 25px, #fff, center);
+    font-family: $main-font;
+    font-style: normal;
+    opacity: 60%;
+}
+
+.site-footer__address-tel {
+    @include main-text-style(15px, 600, 25px, #fff, center);
+    display: block;
+    font-family: $main-font;
+    font-style: normal;
+    opacity: 60%;
+    text-decoration-line: none
+}
+
+.site-footer__icons-list {
+    @include flex-box(flex, null, center, center, 16px);
+    @include list-unstyled;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.site-footer__copywright {
+    @include main-text-style(15px, 600, 25px, #fff, center);
+    font-family: $main-font;
+    opacity: 60%;
+}
+
+
+// media queries 
+
+@media only screen and (min-width: 768px) {
+
+    .site-footer__inner-top {
+        @include flex-box(flex, null, space-between, flex-start, null);
+        padding-inline: 20px;
+    }
+
+    .site-footer__inner-bottom {
+        @include flex-box(flex, null, space-between, center, null);
+        padding-inline: 20px;
+    }
+
+    .site-footer__list {
+        margin-top: 53px;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .site-footer__inner {
+        @include flex-box(flex, null, null, null, null);
+    }
+
+    .site-footer__inner-bottom {
+        @include flex-box(flex, column, null, flex-end, 51px);
+        margin-left: 370px;
+    }
+
+    .site-footer__icons-list {
+        margin-block: 0;
+    }
+
+    .site-footer__list-wrapper {
+        margin-right: 125px;
+    }
+
+    .site-footer__address-location {
+        text-align: left;
+    }
+
+}

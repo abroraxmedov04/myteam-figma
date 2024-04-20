@@ -1,0 +1,58 @@
+@import "../block/blocks";
+
+.article-section {
+    padding-block: 83px;
+    background-color: $primary-color-coral;
+    background-image: url("/assets/font/home-images/Group3.png");
+    background-repeat: no-repeat;
+    background-position-y: 178px;
+}
+
+.article-section__inner {
+    @include flex-box(flex, column, null, center, 24px);
+}
+
+.article-section__title {
+    @include main-text-style(32px, 700, 32px, #012F34, center);
+    font-family: $main-font;
+}
+
+.article-section__title-wrapper {
+    width: 300px;
+}
+
+.article-section__contact-btn {
+    @include btn-style(transparent, #012F34, 18px, 25px, 2px solid #012F34, 10px 33px, #012F34, #fff, null, null, null, null);
+    font-family: $main-font;
+    font-weight: 600;
+    text-decoration-line: none;
+}
+
+
+// media queries 
+
+
+@media only screen and (min-width: 768px) {
+
+    .article-section {
+        background-position-y: 85px;
+    }
+
+    .article-section__inner {
+        @include flex-box(flex, row, space-between, center, null);
+        padding-inline: 80px;
+    }
+
+    .article-section__title-wrapper {
+        width: 336px;
+    }
+
+}
+
+@media only screen and (min-width: 1100px) {
+
+    .article-section__inner {
+        padding-inline: 90px;
+    }
+
+}

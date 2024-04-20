@@ -1,0 +1,104 @@
+@import "../block/blocks";
+
+.hero-section {
+    background-color: $primary-color-green;
+    background-image: url("/assets/font/home-images/Group1.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.hero-section__inner {
+    @include flex-box(flex, column, center, center, 18px);
+    width: 327px;
+    margin-inline: auto;
+}
+
+.hero-title__wrapper {
+    width: 220px;
+}
+
+.hero-section__title {
+    @include main-text-style(40px, 700, 40px, $primary-color-white, center);
+    font-family: $main-font;
+}
+
+.hero-title-span {
+    color: $primary-color-coral;
+}
+
+.hero-section__desc {
+    @include main-text-style (15px, 600, 28px, $primary-color-white, center);
+    font-family: $main-font;
+    margin-bottom: 197px;
+}
+
+
+
+
+
+
+// @media queries 
+
+@media only screen and (min-width: 768px) {
+
+    .hero-section__title {
+        @include main-text-style(64px, 700, 56px, null, null);
+    }
+
+    .hero-title__wrapper {
+        width: 380px;
+    }
+
+    .hero-section__inner {
+        width: 460px;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .hero-section {
+        background-image: url("/assets/font/home-images/Group1.png"), url("/assets/font/home-images/Group2.png");
+        background-position: calc(50% - -370px) calc(50% - -175px), left .1px;
+    }
+
+    .hero-section__inner {
+        @include flex-box(flex, row, space-between, flex-start, null);
+        // background-image: url("/assets/font/home-images/Group2.png");
+        // background-repeat: no-repeat;
+        // background-position: calc(50% - 652px) calc(50% - 120px);
+    }
+
+    .hero-section__title {
+        @include main-text-style(100px, 700, 100px, null, null);
+        text-align: left;
+    }
+
+    .hero-title__wrapper {
+        width: 600px;
+    }
+
+    .hero-section__desc {
+        font-size: 18px;
+        margin-bottom: 255px;
+        text-align: left;
+    }
+
+    .hero-section__desc-wrapper {
+        @include flex-box(flex, column, null, flex-start, 79px);
+        width: 450px;
+        
+    }
+
+    .hero-desc__top-span {
+        width: 50px;
+        height: 4px;
+        background-color: #79C8C7;
+    }
+
+    .hero-section__inner {
+        max-width: 1500px;
+        width: 100%;
+    }
+
+}
