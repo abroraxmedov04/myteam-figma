@@ -1,10 +1,6 @@
-@import "../layouts/home-header";
-@import "../layouts/home-hero";
-@import "../layouts/home-manage";
-@import "../layouts/home-stories";
-@import "../layouts/home-article";
-@import "../layouts/home-footer";
-
-
-
-
+@use "../layouts/home-header";
+@use "../layouts/home-hero";
+@use "../layouts/home-manage";
+@use "../layouts/home-stories";
+@use "../layouts/home-article";
+@use "../layouts/home-footer";

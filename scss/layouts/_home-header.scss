@@ -1,118 +1,127 @@
+@use "../abstract/mixins" as mixin;
+@use "../abstract/variables" as var;
+
 .site-header {
-    position: relative;
-    padding-top: 48px;
-    padding-bottom: 80px;
-    background-color: $primary-color-green
+  position: relative;
+  padding-top: 48px;
+  padding-bottom: 80px;
+  background-color: var.$primary-color-green;
 }
 
 .site-header__inner {
-    @include flex-box(flex, row, space-between, center, null);
+  @include mixin.flex-box(flex, row, space-between, center, null);
 }
 
 .navbar {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    margin-top: -168px;
-    margin-left: 120px;
-    padding-top: 56px;
-    padding-inline: 48px;
-    z-index: 100;
-    background-color: $secondary-color-darkerBlue;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  margin-top: -168px;
+  margin-left: 120px;
+  padding-top: 56px;
+  padding-inline: 48px;
+  z-index: 100;
+  background-color: var.$secondary-color-darkerBlue;
 }
 
 .navbar__close-btn {
-    display: block;
-    width: 20px;
-    height: 17px;
-    border: none;
-    margin-left: auto;
-    background-image: url("/assets/font/home-images/close-btn.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: transparent;
+  display: block;
+  width: 20px;
+  height: 17px;
+  border: none;
+  margin-left: auto;
+  background-image: url("/assets/font/home-images/close-btn.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
 }
 
 .navbar__list {
-    @include flex-box(flex, column, center, flex-start, 24px);
-    @include list-unstyled;
+  @include mixin.flex-box(flex, column, center, flex-start, 24px);
+  @include mixin.list-unstyled;
 }
 
 .navbar__link {
-    @include main-text-style(18px, 600, 28px, $primary-color-white, null);
-    font-family: $main-font;
-    text-decoration-line: none;
+  @include mixin.main-text-style(
+    18px,
+    600,
+    28px,
+    var.$primary-color-white,
+    null
+  );
+  font-family: var.$main-font;
+  text-decoration-line: none;
 
-    &:hover {
-        color: $primary-color-coral;
-        transition: 0.3s;
-    }
+  &:hover {
+    color: var.$primary-color-coral;
+    transition: 0.3s;
+  }
 }
 
 .contact-button {
-    @include btn-style(transparent, #fff, 18px, 25px, 2px solid #fff, 10px 33px, #fff, #002529, null, null, null, null);
-    margin-top: 50px;
+  @include mixin.btn-style(
+    transparent,
+    #fff,
+    18px,
+    25px,
+    2px solid #fff,
+    10px 33px,
+    #fff,
+    #002529,
+    null,
+    null,
+    null,
+    null
+  );
+  margin-top: 50px;
 }
 
 .site-header__menu-btn {
-    background-image: url("/assets/font/home-images/menu-btn.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 20px;
-    height: 17px;
-    border: none;
-    background-color: transparent;
+  background-image: url("/assets/font/home-images/menu-btn.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 17px;
+  border: none;
+  background-color: transparent;
 }
 
 .active .navbar {
-    display: block;
+  display: block;
 }
 
 .scroll-hidden {
-    overflow: hidden;
+  overflow: hidden;
 }
 
-
-
-
-// @meida queries 
+// @meida queries
 
 @media only screen and (min-width: 768px) {
+  .site-header__menu-btn {
+    display: none;
+  }
 
-    .site-header__menu-btn {
-        display: none;
-    }
+  .navbar__close-btn {
+    display: none;
+  }
 
-    .navbar__close-btn {
-        display: none;
-    }
+  .site-header__inner {
+    @include mixin.flex-box(flex, row, null, center, 48px);
+  }
 
-    .site-header__inner {
-        @include flex-box(flex, row, null, center, 48px);
-    }
+  .navbar {
+    display: block;
+    position: static;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
 
-    .navbar {
-        display: block;
-        position: static;
-        height: auto;
-        margin: 0;
-        padding: 0;
-        background-color: transparent;
-    }
-
-    .navbar__list {
-        @include flex-box(flex, row, null, center, 40px);
-    }
-
+  .navbar__list {
+    @include mixin.flex-box(flex, row, null, center, 40px);
+  }
 }
-
-
-
-
-
-
-
-
