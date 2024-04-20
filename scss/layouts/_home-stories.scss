@@ -1,0 +1,71 @@
+.stories-section {
+    padding-top: 140px;
+    padding-bottom: 164px;
+    background-color: $primary-color-green;
+    background-image: url("/assets/font/home-images/Group4.png"), url("/assets/font/home-images/Group5.png");
+    background-repeat: no-repeat;
+    background-position: left top, bottom right;
+}
+
+.stories-section__title {
+    @include main-text-style(32px, 700, 32px, $primary-color-white, center);
+    font-family: $main-font;
+    margin-bottom: 48px;
+}
+
+.stories-title__top-span {
+    color: $secondary-color-lightBlue;
+}
+
+.stories-section__list {
+    @include flex-box(flex, column, null, null, 48px);
+    @include list-unstyled;
+}
+
+.stories-section__item {
+    @include flex-box(flex, column, null, center, 16px);
+    padding-top: 36px;
+    background-image: url("/assets/font/home-images/home-quote.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.stories-section__item-feedback {
+    @include main-text-style(15px, 600, 25px, $primary-color-white, center);
+    font-family: $main-font;
+}
+
+.stories-section__item-title {
+    @include main-text-style(18px, 700, 28px, $secondary-color-lightBlue, center);
+    font-family: $main-font;
+}
+
+.stories-section__item-desc {
+    @include main-text-style(13px, null, 18px, $primary-color-white, center);
+    font-family: $main-font;
+}
+
+
+// media queries 
+
+@media only screen and (min-width: 992px) {
+
+    .stories-section__list {
+        @include flex-box(flex, row, space-between, center, null);
+    }
+
+    .stories-section__item {
+        width: 350px;
+    }
+
+    .stories-section__title {
+        @include main-text-style(48px, 700, 48px, null, null);
+        margin-bottom: 56px;
+    }
+
+    .stories-section__title-wrapper {
+        width: 932px;
+        margin-inline: auto;
+    }
+
+}

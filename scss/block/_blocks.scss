@@ -1,16 +1,18 @@
-// base
-@use "../abstract/variables";
+// abstracts
+@use "../abstract/media";
+@use "../abstract/functions";
 
+// base
 @use "../base/normalizze";
 @use "../base/fonts";
 @use "../base/general";
 
-// abstracts
+// component
+@use "../components/container";
 
 @use "../abstract/mixins";
-@use "../abstract/media";
-@use "../abstract/functions";
+@use "../abstract/variables";
 
-// component
 
-@use "../components/container";
+
+
