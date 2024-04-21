@@ -43,3 +43,22 @@ document.addEventListener("click", (e) => {
     e.target.style.transform = "rotate(0)";
   }
 });
+
+const elContactForm = document.querySelector(".contact-form");
+const elInputName = elContactForm.querySelector(".js-input-name");
+const elInputEmail = elContactForm.querySelector(".js-input-email");
+const elInputCompanyName = elContactForm.querySelector(".js-input-companyName");
+const elInputTitle = elContactForm.querySelector(".js-input-title");
+const elInputTextarea = elContactForm.querySelector(".js-input-textArea");
+
+
+
+
+elContactForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+
+  console.log(`Name: ${elInputName.value} \nEmail: ${elInputEmail.value} \nCompany Name: ${elInputCompanyName.value} \nTitle: ${elInputTitle.value} \nMessage: ${elInputTextarea.value}`);
+
+});
+
+
