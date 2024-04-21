@@ -2,148 +2,170 @@
 @use "../abstract/variables" as var;
 
 .contact-section {
-    padding-top: 40px;
-    padding-bottom: 88px;
+  padding-top: 40px;
+  padding-bottom: 88px;
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image: url("../../assets/font/home-images/contact-section-mobile-image.png");
+    height: 110px;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    background-repeat: no-repeat;
+    right: 0;
+
+    @media only screen and (min-width: 768px) {
+      display: none;
+    }
+  }
 }
 
 .contact-section__title {
-    @include mixin.main-text-style(40px, 700, 40px, #fff, center);
+  @include mixin.main-text-style(40px, 700, 40px, #fff, center);
 }
 
 .contact-section__desc {
-    @include mixin.main-text-style(32px, 700, 48px, var.$primary-color-coral, center);
+  @include mixin.main-text-style(
+    32px,
+    700,
+    48px,
+    var.$primary-color-coral,
+    center
+  );
 }
 
 .contact-section__list {
-    @include mixin.flex-box(flex, column, null, null, 24px);
-    @include mixin.list-unstyled;
-    margin-top: 40px;
-    margin-bottom: 56px;
-    padding-inline: 127px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  @include mixin.list-unstyled;
+  margin-top: 40px;
+  margin-bottom: 56px;
 }
 
 .contact-section__item {
-    @include mixin.flex-box(flex, null, null, center, 23px);
+  @include mixin.flex-box(flex, null, null, center, 23px);
+  max-width: 515px;
+  width: 100%;
 }
 
 .contact-section__item-desc {
-    @include mixin.main-text-style(18px, 700, 28px, #fff, null);
+  @include mixin.main-text-style(18px, 700, 28px, #fff, null);
 }
 
 .contact-form {
-    @include mixin.flex-box(flex, column, null, null, 24px);
-    max-width: 542px;
+  @include mixin.flex-box(flex, column, null, null, 24px);
+  max-width: 542px;
+  width: 100%;
+  margin-inline: auto;
+
+  &__name-input {
     width: 100%;
-    margin-inline: auto;
+    padding-left: 14px;
+    padding-bottom: 17px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
 
-    &__name-input {
-        width: 100%;
-        padding-left: 14px;
-        padding-bottom: 17px;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #fff;
-        outline: none;
-
-        &::placeholder {
-            @include mixin.main-text-style(15px, 600, 25px, #fff, null);
-            letter-spacing: -0.12px;
-            opacity: 60%;
-        }
-
-        &:focus {
-            color: #fff;
-        }
-
-        &:not(:placeholder-shown) {
-            color: #fff;
-        }
+    &::placeholder {
+      @include mixin.main-text-style(15px, 600, 25px, #fff, null);
+      letter-spacing: -0.12px;
+      opacity: 60%;
     }
 
-    &__textarea {
-        width: 100%;
-        padding-left: 14px;
-        padding-bottom: 58px;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #fff;
-        outline: none;
-        resize: none;
-
-        &::placeholder {
-            @include mixin.main-text-style(15px, 600, 25px, #fff, null);
-            letter-spacing: -0.12px;
-            opacity: 60%;
-        }
-
-        &:focus {
-            color: #fff;
-        }
-
-        &:not(:placeholder-shown) {
-            color: #fff;
-        }
-
+    &:focus {
+      color: #fff;
     }
 
-    &__submit-btn {
-        display: block;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 28px;
-        width: 123px;
-        margin-inline: right auto;
-        padding: 10px 33px;
-        border-radius: 25px;
-        border: none;
-        color: #004047;
-        background-color: #fff;
-
-        &:hover {
-            background-color: #79C8C7;
-        }
+    &:not(:placeholder-shown) {
+      color: #fff;
     }
+  }
+
+  &__textarea {
+    width: 100%;
+    padding-left: 14px;
+    padding-bottom: 58px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    resize: none;
+
+    &::placeholder {
+      @include mixin.main-text-style(15px, 600, 25px, #fff, null);
+      letter-spacing: -0.12px;
+      opacity: 60%;
+    }
+
+    &:focus {
+      color: #fff;
+    }
+
+    &:not(:placeholder-shown) {
+      color: #fff;
+    }
+  }
+
+  &__submit-btn {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    width: 123px;
+    margin-inline: right auto;
+    padding: 10px 33px;
+    border-radius: 25px;
+    border: none;
+    color: #004047;
+    background-color: #fff;
+
+    &:hover {
+      background-color: #79c8c7;
+    }
+  }
 }
 
-
-// media queries 
+// media queries
 
 @media only screen and (min-width: 768px) {
-
-    .contact-section {
-        background-image: url("/assets/contact-images/group8.png"), url("/assets/contact-images/group7.png");
-        background-repeat: no-repeat;
-        background-position: left 20px, right 790px;
-    }
-
+  .contact-section {
+    background-image: url("/assets/contact-images/group8.png"),
+      url("/assets/contact-images/group7.png");
+    background-repeat: no-repeat;
+    background-position: left 20px, right 790px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
+  .contact-section {
+    background-position: left 20px, right bottom;
+  }
 
-    .contact-section {
-        background-position: left 20px, right bottom;
-    }
+  .contact-section__inner {
+    @include mixin.flex-box(flex, null, space-between, center, null);
+  }
 
-    .contact-section__inner {
-        @include mixin.flex-box(flex, null, space-between, center, null);
-    }
+  .contact-section__list {
+    margin-top: 32px;
+    margin-bottom: 0;
+    padding-inline: 0;
+  }
 
-    .contact-section__list {
-        margin-top: 32px;
-        margin-bottom: 0;
-        padding-inline: 0;
-    }
+  .contact-section__title {
+    text-align: left;
+  }
 
-    .contact-section__title {
-        text-align: left;
-    }
+  .contact-section__desc {
+    text-align: left;
+    margin-top: 16px;
+  }
 
-    .contact-section__desc {
-        text-align: left;
-    }
-
-    .contact-form {
-        margin-inline: 0;
-    }
-
+  .contact-form {
+    margin-inline: 0;
+  }
 }
